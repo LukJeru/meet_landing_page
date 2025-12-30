@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//colors
+
+$cyan-600: #4D96A9;
+$cyan-300: #8FE3F9;
+
+$purple-600: #855FB1;
+$purple-300: #D9B8FF;
+
+$slate-900: #28283D;
+$slate-600: #87879D;
+$slate-300: #D1D1DF;
+
+$white: #FAFAFA;
+
+//text-presets
+
+%text-preset-1 {
+  font-size: clamp(2.8rem, 2vw, 4rem);
+  line-height: 110%;
+}
+
+%text-preset-2 {
+  font-size: 2.5rem;
+  line-height: 110%;
+}
+
+%text-preset-3 {
+  font-size: .5rem;
+  line-height: 110%;
+  letter-spacing: .25rem;
+}
+
+%text-preset-4 {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 110%;
+}
+
+%text-preset-5 {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+h1 {
+  @extend %text-preset-1;
+  color: $slate-900;
+}
+
+
+.content {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  padding-top: 4rem;
+}
+
+.hero-images {
+  display: flex;
+  position: relative;
+  left: -5%;
+  flex-wrap: nowrap;
+  width: 110%;
+
+  img {
+    width: 50%;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.hero-content p {
+  @extend %text-preset-4;
+  color: $slate-600;
+}
+
+%button {
+  border-radius: 29px;
+  font-weight: bold;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  color: white;
+  margin: .5rem;
+  width: fit-content;
+}
+
+.btn-blue {
+  @extend %button;
+  background-color: $cyan-600;
+
+  b {
+    color: $cyan-300;
+  }
+}
+
+.btn-purple {
+  @extend %button;
+  background-color: $purple-600;
+
+  b {
+    color: $purple-300;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stripe {
+  margin-top: 8rem;
+  border-top: 1px solid $slate-300;
+  width: 5rem;
+  transform: rotate(90deg);
+  position: relative;
+  bottom: 2.5rem;
+}
+
+.number {
+  @extend %text-preset-5;
+  color: $slate-300;
+  border: 1px solid $slate-300;
+  padding: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
