@@ -42,12 +42,12 @@ $white: #FAFAFA;
 }
 
 %text-preset-2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 1.5vw, 2.5rem);
   line-height: 110%;
 }
 
 %text-preset-3 {
-  font-size: .5rem;
+  font-size: clamp(1rem, 1vw, 2rem);
   line-height: 110%;
   letter-spacing: .25rem;
 }
@@ -61,12 +61,22 @@ $white: #FAFAFA;
   font-size: 1rem;
   line-height: 150%;
 }
-
-h1 {
-  @extend %text-preset-1;
+body {
   color: $slate-900;
 }
 
+h1 {
+  @extend %text-preset-1;
+}
+
+h2 {
+  @extend %text-preset-2;
+}
+
+h3 {
+  @extend %text-preset-3;
+  color: $cyan-600;
+}
 
 .content {
   padding-top: 3rem;
@@ -139,10 +149,17 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin: 2rem 2rem;
+
+  p{
+    @extend %text-preset-4;
+    color: $slate-600;
+  }
 }
 
 .stripe {
-  margin-top: 8rem;
+  margin-top: 4rem;
   border-top: 1px solid $slate-300;
   width: 5rem;
   transform: rotate(90deg);
@@ -161,6 +178,18 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  background-color: $white;
+}
+
+.number.num2 {
+  position: relative;
+  top: 2rem;
+  margin-bottom: 0;
+}
+
+.stripe.num2{
+  bottom: 0.5rem;
 }
 
 footer {
@@ -168,6 +197,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  background-image: url(assets/desktop/image-footer.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .footer-hero {
@@ -175,4 +209,28 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin: 2rem 2rem;
+
+  h3 {
+    @extend %text-preset-2;
+    color: $white;
+  }
+
+  p {
+    @extend %text-preset-4;
+    color: $white;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  margin-top: 4rem;
+
+  img {
+    border-radius: 8px;
+  }
 }
