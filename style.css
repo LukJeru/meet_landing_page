@@ -165,9 +165,12 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-image: url(assets/desktop/image-footer.jpg);
+  background-position: center center;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 
@@ -177,13 +180,27 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 2rem 2rem;
+  width: 100%;
 }
 .footer-hero h3 {
   color: #FAFAFA;
+  z-index: 2;
 }
 .footer-hero p {
   color: #FAFAFA;
+  z-index: 2;
+}
+.footer-hero .btn-purple {
+  z-index: 2;
+}
+
+.background-color {
+  background-color: #4D96A9;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0rem;
 }
 
 .gallery {
